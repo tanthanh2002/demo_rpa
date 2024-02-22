@@ -1,0 +1,90 @@
+[2024-02-21T08:06:33.293+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_email.get_mail scheduled__2024-02-13T01:00:00+00:00 [queued]>
+[2024-02-21T08:06:33.299+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_email.get_mail scheduled__2024-02-13T01:00:00+00:00 [queued]>
+[2024-02-21T08:06:33.299+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-21T08:06:33.306+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): get_mail> on 2024-02-13 01:00:00+00:00
+[2024-02-21T08:06:33.310+0000] {standard_task_runner.py:60} INFO - Started process 180 to run task
+[2024-02-21T08:06:33.312+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'extract_email', 'get_mail', 'scheduled__2024-02-13T01:00:00+00:00', '--job-id', '192', '--raw', '--subdir', 'DAGS_FOLDER/extract_email.py', '--cfg-path', '/tmp/tmp9e65qqg9']
+[2024-02-21T08:06:33.313+0000] {standard_task_runner.py:88} INFO - Job 192: Subtask get_mail
+[2024-02-21T08:06:33.341+0000] {task_command.py:423} INFO - Running <TaskInstance: extract_email.get_mail scheduled__2024-02-13T01:00:00+00:00 [running]> on host 96f19b77385b
+[2024-02-21T08:06:33.390+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_email' AIRFLOW_CTX_TASK_ID='get_mail' AIRFLOW_CTX_EXECUTION_DATE='2024-02-13T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-13T01:00:00+00:00'
+[2024-02-21T08:06:36.541+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/extract_email.py", line 16, in get_mail
+    mail.authorize(account=os.getenv("GMAIL_ACCOUNT"), password=os.getenv("GMAIL_PASSWORD"))
+  File "/home/airflow/.local/lib/python3.8/site-packages/RPA/Email/ImapSmtp.py", line 496, in authorize
+    self.authorize_imap(
+  File "/home/airflow/.local/lib/python3.8/site-packages/RPA/Email/ImapSmtp.py", line 453, in authorize_imap
+    self.imap_conn.login(account, password)
+  File "/usr/local/lib/python3.8/imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Too many simultaneous connections. (Failure)'
+[2024-02-21T08:06:36.552+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=extract_email, task_id=get_mail, execution_date=20240213T010000, start_date=20240221T080633, end_date=20240221T080636
+[2024-02-21T08:06:36.563+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 192 for task get_mail (b'[ALERT] Too many simultaneous connections. (Failure)'; 180)
+[2024-02-21T08:06:36.575+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-21T08:06:36.590+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-02-21T08:13:03.042+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_email.get_mail scheduled__2024-02-13T01:00:00+00:00 [queued]>
+[2024-02-21T08:13:03.094+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_email.get_mail scheduled__2024-02-13T01:00:00+00:00 [queued]>
+[2024-02-21T08:13:03.094+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-21T08:13:03.176+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): get_mail> on 2024-02-13 01:00:00+00:00
+[2024-02-21T08:13:03.188+0000] {standard_task_runner.py:60} INFO - Started process 164 to run task
+[2024-02-21T08:13:03.203+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'extract_email', 'get_mail', 'scheduled__2024-02-13T01:00:00+00:00', '--job-id', '225', '--raw', '--subdir', 'DAGS_FOLDER/extract_email.py', '--cfg-path', '/tmp/tmpufxvb1ka']
+[2024-02-21T08:13:03.219+0000] {standard_task_runner.py:88} INFO - Job 225: Subtask get_mail
+[2024-02-21T08:13:03.403+0000] {task_command.py:423} INFO - Running <TaskInstance: extract_email.get_mail scheduled__2024-02-13T01:00:00+00:00 [running]> on host 968b17b6b013
+[2024-02-21T08:13:03.646+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_email' AIRFLOW_CTX_TASK_ID='get_mail' AIRFLOW_CTX_EXECUTION_DATE='2024-02-13T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-13T01:00:00+00:00'
+[2024-02-21T08:13:06.134+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/extract_email.py", line 16, in get_mail
+    mail.authorize(account=os.getenv("GMAIL_ACCOUNT"), password=os.getenv("GMAIL_PASSWORD"))
+  File "/home/airflow/.local/lib/python3.8/site-packages/RPA/Email/ImapSmtp.py", line 496, in authorize
+    self.authorize_imap(
+  File "/home/airflow/.local/lib/python3.8/site-packages/RPA/Email/ImapSmtp.py", line 453, in authorize_imap
+    self.imap_conn.login(account, password)
+  File "/usr/local/lib/python3.8/imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Too many simultaneous connections. (Failure)'
+[2024-02-21T08:13:06.145+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=extract_email, task_id=get_mail, execution_date=20240213T010000, start_date=20240221T081303, end_date=20240221T081306
+[2024-02-21T08:13:06.161+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 225 for task get_mail (b'[ALERT] Too many simultaneous connections. (Failure)'; 164)
+[2024-02-21T08:13:06.221+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-21T08:13:06.252+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-02-21T08:18:04.675+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_email.get_mail scheduled__2024-02-13T01:00:00+00:00 [queued]>
+[2024-02-21T08:18:04.689+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_email.get_mail scheduled__2024-02-13T01:00:00+00:00 [queued]>
+[2024-02-21T08:18:04.690+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-21T08:18:04.706+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): get_mail> on 2024-02-13 01:00:00+00:00
+[2024-02-21T08:18:04.714+0000] {standard_task_runner.py:60} INFO - Started process 114 to run task
+[2024-02-21T08:18:04.718+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'extract_email', 'get_mail', 'scheduled__2024-02-13T01:00:00+00:00', '--job-id', '258', '--raw', '--subdir', 'DAGS_FOLDER/extract_email.py', '--cfg-path', '/tmp/tmpx54x6ij8']
+[2024-02-21T08:18:04.721+0000] {standard_task_runner.py:88} INFO - Job 258: Subtask get_mail
+[2024-02-21T08:18:04.777+0000] {task_command.py:423} INFO - Running <TaskInstance: extract_email.get_mail scheduled__2024-02-13T01:00:00+00:00 [running]> on host 9f5f399fdbe3
+[2024-02-21T08:18:04.888+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_email' AIRFLOW_CTX_TASK_ID='get_mail' AIRFLOW_CTX_EXECUTION_DATE='2024-02-13T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-13T01:00:00+00:00'
+[2024-02-21T08:18:07.443+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/extract_email.py", line 16, in get_mail
+    mail.authorize(account=os.getenv("GMAIL_ACCOUNT"), password=os.getenv("GMAIL_PASSWORD"))
+  File "/home/airflow/.local/lib/python3.8/site-packages/RPA/Email/ImapSmtp.py", line 496, in authorize
+    self.authorize_imap(
+  File "/home/airflow/.local/lib/python3.8/site-packages/RPA/Email/ImapSmtp.py", line 453, in authorize_imap
+    self.imap_conn.login(account, password)
+  File "/usr/local/lib/python3.8/imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Too many simultaneous connections. (Failure)'
+[2024-02-21T08:18:07.454+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=extract_email, task_id=get_mail, execution_date=20240213T010000, start_date=20240221T081804, end_date=20240221T081807
+[2024-02-21T08:18:07.468+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 258 for task get_mail (b'[ALERT] Too many simultaneous connections. (Failure)'; 114)
+[2024-02-21T08:18:07.493+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-21T08:18:07.507+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

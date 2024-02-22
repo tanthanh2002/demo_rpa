@@ -1,0 +1,44 @@
+[2024-02-22T03:59:56.358+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_email.get_mail manual__2024-02-22T03:59:52.306001+00:00 [queued]>
+[2024-02-22T03:59:56.363+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_email.get_mail manual__2024-02-22T03:59:52.306001+00:00 [queued]>
+[2024-02-22T03:59:56.364+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-22T03:59:56.371+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): get_mail> on 2024-02-22 03:59:52.306001+00:00
+[2024-02-22T03:59:56.375+0000] {standard_task_runner.py:60} INFO - Started process 60 to run task
+[2024-02-22T03:59:56.377+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'extract_email', 'get_mail', 'manual__2024-02-22T03:59:52.306001+00:00', '--job-id', '316', '--raw', '--subdir', 'DAGS_FOLDER/extract_email.py', '--cfg-path', '/tmp/tmpj28b8hqx']
+[2024-02-22T03:59:56.378+0000] {standard_task_runner.py:88} INFO - Job 316: Subtask get_mail
+[2024-02-22T03:59:56.405+0000] {task_command.py:423} INFO - Running <TaskInstance: extract_email.get_mail manual__2024-02-22T03:59:52.306001+00:00 [running]> on host d870797899f8
+[2024-02-22T03:59:56.455+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_email' AIRFLOW_CTX_TASK_ID='get_mail' AIRFLOW_CTX_EXECUTION_DATE='2024-02-22T03:59:52.306001+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-22T03:59:52.306001+00:00'
+[2024-02-22T04:00:00.197+0000] {ImapSmtp.py:839} INFO - IMAP search: 'gmail:'Message from RPA Python' after:15-12-2023'
+[2024-02-22T04:00:04.190+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('attachments/test.txt')
+[2024-02-22T04:00:04.191+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-22T04:00:04.191+0000] {logging_mixin.py:188} INFO - error when saving attachment
+[2024-02-22T04:00:04.191+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('attachments/test.txt')
+[2024-02-22T04:00:04.191+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-22T04:00:04.191+0000] {logging_mixin.py:188} INFO - error when saving attachment
+[2024-02-22T04:00:04.191+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('attachments/test.txt')
+[2024-02-22T04:00:04.191+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-22T04:00:04.191+0000] {logging_mixin.py:188} INFO - error when saving attachment
+[2024-02-22T04:00:04.192+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('attachments/test.txt')
+[2024-02-22T04:00:04.192+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-22T04:00:04.192+0000] {logging_mixin.py:188} INFO - error when saving attachment
+[2024-02-22T04:00:04.192+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('attachments/test.txt')
+[2024-02-22T04:00:04.192+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-22T04:00:04.192+0000] {logging_mixin.py:188} INFO - error when saving attachment
+[2024-02-22T04:00:04.192+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('attachments/test.txt')
+[2024-02-22T04:00:04.192+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-22T04:00:04.192+0000] {logging_mixin.py:188} INFO - error when saving attachment
+[2024-02-22T04:00:04.192+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('attachments/test.txt')
+[2024-02-22T04:00:04.193+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-22T04:00:04.193+0000] {logging_mixin.py:188} INFO - error when saving attachment
+[2024-02-22T04:00:04.193+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('attachments/test.txt')
+[2024-02-22T04:00:04.193+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-22T04:00:04.193+0000] {logging_mixin.py:188} INFO - error when saving attachment
+[2024-02-22T04:00:04.193+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('attachments/test.txt')
+[2024-02-22T04:00:04.193+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-22T04:00:04.193+0000] {logging_mixin.py:188} INFO - error when saving attachment
+[2024-02-22T04:00:04.193+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('attachments/test.txt')
+[2024-02-22T04:00:04.193+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-22T04:00:04.194+0000] {logging_mixin.py:188} INFO - error when saving attachment
+[2024-02-22T04:00:05.115+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-02-22T04:00:05.125+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=extract_email, task_id=get_mail, execution_date=20240222T035952, start_date=20240222T035956, end_date=20240222T040005
+[2024-02-22T04:00:05.177+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-22T04:00:05.235+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

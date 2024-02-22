@@ -1,0 +1,68 @@
+[2024-02-21T07:38:07.337+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_email.get_mail scheduled__2024-02-01T00:00:00+00:00 [queued]>
+[2024-02-21T07:38:07.349+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_email.get_mail scheduled__2024-02-01T00:00:00+00:00 [queued]>
+[2024-02-21T07:38:07.349+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-21T07:38:07.371+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): get_mail> on 2024-02-01 00:00:00+00:00
+[2024-02-21T07:38:07.382+0000] {standard_task_runner.py:60} INFO - Started process 107 to run task
+[2024-02-21T07:38:07.388+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'extract_email', 'get_mail', 'scheduled__2024-02-01T00:00:00+00:00', '--job-id', '72', '--raw', '--subdir', 'DAGS_FOLDER/extract_email.py', '--cfg-path', '/tmp/tmp6m5qe5uz']
+[2024-02-21T07:38:07.391+0000] {standard_task_runner.py:88} INFO - Job 72: Subtask get_mail
+[2024-02-21T07:38:07.468+0000] {task_command.py:423} INFO - Running <TaskInstance: extract_email.get_mail scheduled__2024-02-01T00:00:00+00:00 [running]> on host 893865381b0d
+[2024-02-21T07:38:07.643+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_email' AIRFLOW_CTX_TASK_ID='get_mail' AIRFLOW_CTX_EXECUTION_DATE='2024-02-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-01T00:00:00+00:00'
+[2024-02-21T07:38:07.645+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 196, in execute
+    context_merge(context, self.op_kwargs, templates_dict=self.templates_dict)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/context.py", line 261, in context_merge
+    context.update(*args, **kwargs)
+  File "/usr/local/lib/python3.8/_collections_abc.py", line 837, in update
+    for key, value in other:
+ValueError: too many values to unpack (expected 2)
+[2024-02-21T07:38:07.676+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=extract_email, task_id=get_mail, execution_date=20240201T000000, start_date=20240221T073807, end_date=20240221T073807
+[2024-02-21T07:38:07.698+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 72 for task get_mail (too many values to unpack (expected 2); 107)
+[2024-02-21T07:38:07.727+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-02-21T07:38:07.752+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-02-21T07:59:38.687+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_email.get_mail scheduled__2024-02-01T00:00:00+00:00 [queued]>
+[2024-02-21T07:59:38.703+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_email.get_mail scheduled__2024-02-01T00:00:00+00:00 [queued]>
+[2024-02-21T07:59:38.703+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-21T07:59:38.725+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): get_mail> on 2024-02-01 00:00:00+00:00
+[2024-02-21T07:59:38.733+0000] {standard_task_runner.py:60} INFO - Started process 370 to run task
+[2024-02-21T07:59:38.736+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'extract_email', 'get_mail', 'scheduled__2024-02-01T00:00:00+00:00', '--job-id', '128', '--raw', '--subdir', 'DAGS_FOLDER/extract_email.py', '--cfg-path', '/tmp/tmpikx380l2']
+[2024-02-21T07:59:38.738+0000] {standard_task_runner.py:88} INFO - Job 128: Subtask get_mail
+[2024-02-21T07:59:38.802+0000] {task_command.py:423} INFO - Running <TaskInstance: extract_email.get_mail scheduled__2024-02-01T00:00:00+00:00 [running]> on host 9bab6a0db245
+[2024-02-21T07:59:38.882+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_email' AIRFLOW_CTX_TASK_ID='get_mail' AIRFLOW_CTX_EXECUTION_DATE='2024-02-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-01T00:00:00+00:00'
+[2024-02-21T07:59:41.502+0000] {ImapSmtp.py:839} INFO - IMAP search: 'gmail:'Message from RPA Python' after:15-12-2023'
+[2024-02-21T07:59:44.529+0000] {logging_mixin.py:188} INFO - Message from RPA Python0
+[2024-02-21T07:59:44.530+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-132.txt')
+[2024-02-21T07:59:44.531+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T07:59:44.532+0000] {logging_mixin.py:188} INFO - Message from RPA Python1
+[2024-02-21T07:59:44.533+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-133.txt')
+[2024-02-21T07:59:44.534+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T07:59:44.534+0000] {logging_mixin.py:188} INFO - Message from RPA Python2
+[2024-02-21T07:59:44.536+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-134.txt')
+[2024-02-21T07:59:44.536+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T07:59:44.537+0000] {logging_mixin.py:188} INFO - Message from RPA Python3
+[2024-02-21T07:59:44.538+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-135.txt')
+[2024-02-21T07:59:44.538+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T07:59:44.539+0000] {logging_mixin.py:188} INFO - Message from RPA Python4
+[2024-02-21T07:59:44.540+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-136.txt')
+[2024-02-21T07:59:44.540+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T07:59:44.541+0000] {logging_mixin.py:188} INFO - Message from RPA Python5
+[2024-02-21T07:59:44.542+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-137.txt')
+[2024-02-21T07:59:44.542+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T07:59:44.542+0000] {logging_mixin.py:188} INFO - Message from RPA Python6
+[2024-02-21T07:59:44.544+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-138.txt')
+[2024-02-21T07:59:44.544+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T07:59:44.545+0000] {logging_mixin.py:188} INFO - Message from RPA Python7
+[2024-02-21T07:59:44.547+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-139.txt')
+[2024-02-21T07:59:44.547+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T07:59:44.548+0000] {logging_mixin.py:188} INFO - Message from RPA Python8
+[2024-02-21T07:59:44.549+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-140.txt')
+[2024-02-21T07:59:44.549+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T07:59:44.550+0000] {logging_mixin.py:188} INFO - Message from RPA Python9
+[2024-02-21T07:59:44.551+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-141.txt')
+[2024-02-21T07:59:44.551+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T07:59:45.202+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-02-21T07:59:45.214+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=extract_email, task_id=get_mail, execution_date=20240201T000000, start_date=20240221T075938, end_date=20240221T075945
+[2024-02-21T07:59:45.248+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-21T07:59:45.275+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

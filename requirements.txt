@@ -1,0 +1,4 @@
+rpaframework
+pydantic-settings
+confluent-kafka
+apache-airflow-providers-apache-kafka

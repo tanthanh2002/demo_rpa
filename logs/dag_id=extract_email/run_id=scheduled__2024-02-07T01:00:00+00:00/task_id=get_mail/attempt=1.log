@@ -1,0 +1,132 @@
+[2024-02-21T08:06:31.474+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_email.get_mail scheduled__2024-02-07T01:00:00+00:00 [queued]>
+[2024-02-21T08:06:31.481+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_email.get_mail scheduled__2024-02-07T01:00:00+00:00 [queued]>
+[2024-02-21T08:06:31.481+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-21T08:06:31.490+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): get_mail> on 2024-02-07 01:00:00+00:00
+[2024-02-21T08:06:31.494+0000] {standard_task_runner.py:60} INFO - Started process 176 to run task
+[2024-02-21T08:06:31.496+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'extract_email', 'get_mail', 'scheduled__2024-02-07T01:00:00+00:00', '--job-id', '188', '--raw', '--subdir', 'DAGS_FOLDER/extract_email.py', '--cfg-path', '/tmp/tmpizfcjez3']
+[2024-02-21T08:06:31.498+0000] {standard_task_runner.py:88} INFO - Job 188: Subtask get_mail
+[2024-02-21T08:06:31.526+0000] {task_command.py:423} INFO - Running <TaskInstance: extract_email.get_mail scheduled__2024-02-07T01:00:00+00:00 [running]> on host 96f19b77385b
+[2024-02-21T08:06:31.594+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_email' AIRFLOW_CTX_TASK_ID='get_mail' AIRFLOW_CTX_EXECUTION_DATE='2024-02-07T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-07T01:00:00+00:00'
+[2024-02-21T08:06:35.163+0000] {ImapSmtp.py:839} INFO - IMAP search: 'gmail:'Message from RPA Python' after:15-12-2023'
+[2024-02-21T08:06:38.941+0000] {logging_mixin.py:188} INFO - Message from RPA Python0
+[2024-02-21T08:06:38.942+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-186.txt')
+[2024-02-21T08:06:38.942+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:06:38.942+0000] {logging_mixin.py:188} INFO - Message from RPA Python1
+[2024-02-21T08:06:38.943+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-187.txt')
+[2024-02-21T08:06:38.944+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:06:38.944+0000] {logging_mixin.py:188} INFO - Message from RPA Python2
+[2024-02-21T08:06:38.945+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-188.txt')
+[2024-02-21T08:06:38.945+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:06:38.945+0000] {logging_mixin.py:188} INFO - Message from RPA Python3
+[2024-02-21T08:06:38.946+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-189.txt')
+[2024-02-21T08:06:38.946+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:06:38.947+0000] {logging_mixin.py:188} INFO - Message from RPA Python4
+[2024-02-21T08:06:38.948+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-190.txt')
+[2024-02-21T08:06:38.948+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:06:38.948+0000] {logging_mixin.py:188} INFO - Message from RPA Python5
+[2024-02-21T08:06:38.949+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-191.txt')
+[2024-02-21T08:06:38.949+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:06:38.949+0000] {logging_mixin.py:188} INFO - Message from RPA Python6
+[2024-02-21T08:06:38.950+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-192.txt')
+[2024-02-21T08:06:38.950+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:06:38.951+0000] {logging_mixin.py:188} INFO - Message from RPA Python7
+[2024-02-21T08:06:38.952+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-193.txt')
+[2024-02-21T08:06:38.952+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:06:38.952+0000] {logging_mixin.py:188} INFO - Message from RPA Python8
+[2024-02-21T08:06:38.953+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-194.txt')
+[2024-02-21T08:06:38.953+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:06:38.954+0000] {logging_mixin.py:188} INFO - Message from RPA Python9
+[2024-02-21T08:06:38.955+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-195.txt')
+[2024-02-21T08:06:38.955+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:06:39.538+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-02-21T08:06:39.550+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=extract_email, task_id=get_mail, execution_date=20240207T010000, start_date=20240221T080631, end_date=20240221T080639
+[2024-02-21T08:06:39.607+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-21T08:06:39.631+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-02-21T08:13:01.105+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_email.get_mail scheduled__2024-02-07T01:00:00+00:00 [queued]>
+[2024-02-21T08:13:01.110+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_email.get_mail scheduled__2024-02-07T01:00:00+00:00 [queued]>
+[2024-02-21T08:13:01.111+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-21T08:13:01.118+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): get_mail> on 2024-02-07 01:00:00+00:00
+[2024-02-21T08:13:01.122+0000] {standard_task_runner.py:60} INFO - Started process 159 to run task
+[2024-02-21T08:13:01.124+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'extract_email', 'get_mail', 'scheduled__2024-02-07T01:00:00+00:00', '--job-id', '220', '--raw', '--subdir', 'DAGS_FOLDER/extract_email.py', '--cfg-path', '/tmp/tmpqmf7mtzx']
+[2024-02-21T08:13:01.125+0000] {standard_task_runner.py:88} INFO - Job 220: Subtask get_mail
+[2024-02-21T08:13:01.154+0000] {task_command.py:423} INFO - Running <TaskInstance: extract_email.get_mail scheduled__2024-02-07T01:00:00+00:00 [running]> on host 968b17b6b013
+[2024-02-21T08:13:01.204+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_email' AIRFLOW_CTX_TASK_ID='get_mail' AIRFLOW_CTX_EXECUTION_DATE='2024-02-07T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-07T01:00:00+00:00'
+[2024-02-21T08:13:04.524+0000] {ImapSmtp.py:839} INFO - IMAP search: 'gmail:'Message from RPA Python' after:15-12-2023'
+[2024-02-21T08:13:08.001+0000] {logging_mixin.py:188} INFO - Message from RPA Python0
+[2024-02-21T08:13:08.004+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-77.txt')
+[2024-02-21T08:13:08.005+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:13:08.006+0000] {logging_mixin.py:188} INFO - Message from RPA Python1
+[2024-02-21T08:13:08.008+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-78.txt')
+[2024-02-21T08:13:08.009+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:13:08.010+0000] {logging_mixin.py:188} INFO - Message from RPA Python2
+[2024-02-21T08:13:08.012+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-79.txt')
+[2024-02-21T08:13:08.013+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:13:08.014+0000] {logging_mixin.py:188} INFO - Message from RPA Python3
+[2024-02-21T08:13:08.017+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-80.txt')
+[2024-02-21T08:13:08.018+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:13:08.019+0000] {logging_mixin.py:188} INFO - Message from RPA Python4
+[2024-02-21T08:13:08.021+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-81.txt')
+[2024-02-21T08:13:08.022+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:13:08.023+0000] {logging_mixin.py:188} INFO - Message from RPA Python5
+[2024-02-21T08:13:08.024+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-82.txt')
+[2024-02-21T08:13:08.025+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:13:08.025+0000] {logging_mixin.py:188} INFO - Message from RPA Python6
+[2024-02-21T08:13:08.027+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-83.txt')
+[2024-02-21T08:13:08.027+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:13:08.027+0000] {logging_mixin.py:188} INFO - Message from RPA Python7
+[2024-02-21T08:13:08.029+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-84.txt')
+[2024-02-21T08:13:08.029+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:13:08.030+0000] {logging_mixin.py:188} INFO - Message from RPA Python8
+[2024-02-21T08:13:08.031+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-85.txt')
+[2024-02-21T08:13:08.031+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:13:08.031+0000] {logging_mixin.py:188} INFO - Message from RPA Python9
+[2024-02-21T08:13:08.032+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-86.txt')
+[2024-02-21T08:13:08.032+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:13:08.627+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-02-21T08:13:08.637+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=extract_email, task_id=get_mail, execution_date=20240207T010000, start_date=20240221T081301, end_date=20240221T081308
+[2024-02-21T08:13:08.699+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-21T08:13:08.745+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-02-21T08:18:04.468+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_email.get_mail scheduled__2024-02-07T01:00:00+00:00 [queued]>
+[2024-02-21T08:18:04.483+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_email.get_mail scheduled__2024-02-07T01:00:00+00:00 [queued]>
+[2024-02-21T08:18:04.483+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-02-21T08:18:04.516+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): get_mail> on 2024-02-07 01:00:00+00:00
+[2024-02-21T08:18:04.525+0000] {standard_task_runner.py:60} INFO - Started process 113 to run task
+[2024-02-21T08:18:04.529+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'extract_email', 'get_mail', 'scheduled__2024-02-07T01:00:00+00:00', '--job-id', '257', '--raw', '--subdir', 'DAGS_FOLDER/extract_email.py', '--cfg-path', '/tmp/tmpvrx5ut5x']
+[2024-02-21T08:18:04.531+0000] {standard_task_runner.py:88} INFO - Job 257: Subtask get_mail
+[2024-02-21T08:18:04.612+0000] {task_command.py:423} INFO - Running <TaskInstance: extract_email.get_mail scheduled__2024-02-07T01:00:00+00:00 [running]> on host 9f5f399fdbe3
+[2024-02-21T08:18:04.723+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_email' AIRFLOW_CTX_TASK_ID='get_mail' AIRFLOW_CTX_EXECUTION_DATE='2024-02-07T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-07T01:00:00+00:00'
+[2024-02-21T08:18:07.170+0000] {ImapSmtp.py:839} INFO - IMAP search: 'gmail:'Message from RPA Python' after:15-12-2023'
+[2024-02-21T08:18:10.201+0000] {logging_mixin.py:188} INFO - Message from RPA Python0
+[2024-02-21T08:18:10.202+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-239.txt')
+[2024-02-21T08:18:10.202+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:18:10.203+0000] {logging_mixin.py:188} INFO - Message from RPA Python1
+[2024-02-21T08:18:10.204+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-240.txt')
+[2024-02-21T08:18:10.204+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:18:10.204+0000] {logging_mixin.py:188} INFO - Message from RPA Python2
+[2024-02-21T08:18:10.205+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-241.txt')
+[2024-02-21T08:18:10.205+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:18:10.205+0000] {logging_mixin.py:188} INFO - Message from RPA Python3
+[2024-02-21T08:18:10.206+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-242.txt')
+[2024-02-21T08:18:10.207+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:18:10.207+0000] {logging_mixin.py:188} INFO - Message from RPA Python4
+[2024-02-21T08:18:10.208+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-243.txt')
+[2024-02-21T08:18:10.208+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:18:10.208+0000] {logging_mixin.py:188} INFO - Message from RPA Python5
+[2024-02-21T08:18:10.209+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-244.txt')
+[2024-02-21T08:18:10.209+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:18:10.209+0000] {logging_mixin.py:188} INFO - Message from RPA Python6
+[2024-02-21T08:18:10.210+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-245.txt')
+[2024-02-21T08:18:10.211+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:18:10.211+0000] {logging_mixin.py:188} INFO - Message from RPA Python7
+[2024-02-21T08:18:10.212+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-246.txt')
+[2024-02-21T08:18:10.212+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:18:10.212+0000] {logging_mixin.py:188} INFO - Message from RPA Python8
+[2024-02-21T08:18:10.213+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-247.txt')
+[2024-02-21T08:18:10.213+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:18:10.214+0000] {logging_mixin.py:188} INFO - Message from RPA Python9
+[2024-02-21T08:18:10.215+0000] {ImapSmtp.py:1240} INFO - Attachment filepath: PosixPath('/data/attachments/test-248.txt')
+[2024-02-21T08:18:10.215+0000] {ImapSmtp.py:1243} INFO - Saving attachment: test.txt
+[2024-02-21T08:18:10.807+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-02-21T08:18:10.822+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=extract_email, task_id=get_mail, execution_date=20240207T010000, start_date=20240221T081804, end_date=20240221T081810
+[2024-02-21T08:18:10.869+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-02-21T08:18:10.888+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
